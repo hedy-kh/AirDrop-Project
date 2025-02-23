@@ -34,7 +34,7 @@ contract ClaimAirDrop is Script {
         if (Sig.length != 65) {
             revert interact__InvalidLength();
         }
-         assembly {
+        assembly {
             r := mload(add(Sig, 32))
             s := mload(add(Sig, 64))
             v := byte(0, mload(add(Sig, 96)))
